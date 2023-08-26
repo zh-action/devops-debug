@@ -18,4 +18,7 @@ jobs:
         id: bash_test
         run: |
           echo "bash test"
+          echo $GITHUB_REF
+          echo $GITHUB_REF_NAME
+          echo ${{github.ref}}
 
