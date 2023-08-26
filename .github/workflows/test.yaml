@@ -1,0 +1,21 @@
+name: Debug Github Actions
+
+on:
+  push:
+    path:
+      - '**'
+  workflow_dispatch:
+
+jobs:
+  debug_actions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Bash test
+        id: bash_test
+        run: |
+          echo "bash test"
+
